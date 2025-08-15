@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { NavigationType } from "@/types/navigation"
+import { NavigationType } from "@/types/navigationType"
 
 type NavigationProps = NavigationType
 
