@@ -11,17 +11,17 @@ describe("test Latest Episode functionality", () => {
 
         expect(sectionTitle).toBeInTheDocument()
 
-        expect(screen.getAllByTestId("image")).toHaveLength(1);
-        expect(screen.queryAllByTestId("image").slice(1)).toHaveLength(0)
+        expect(screen.getAllByTestId("target-itemImage")).toHaveLength(1);
+        expect(screen.queryAllByTestId("target-itemImage").slice(1)).toHaveLength(0)
 
         const button = screen.getByRole("button", { name: /View all episodes/i });
 
         fireEvent.click(button);
-        expect(screen.getAllByTestId("image")).toHaveLength(episodes.length);
+        expect(screen.getAllByTestId("target-itemImage")).toHaveLength(episodes.length);
 
         fireEvent.click(button);
-        expect(screen.getAllByTestId("image")).toHaveLength(1);
-        expect(screen.queryAllByTestId("image").slice(1)).toHaveLength(0)
+        expect(screen.getAllByTestId("target-itemImage")).toHaveLength(1);
+        expect(screen.queryAllByTestId("target-itemImage").slice(1)).toHaveLength(0)
        
     })
 
@@ -30,7 +30,7 @@ describe("test Latest Episode functionality", () => {
 
         const firstEpisode = episodes[0];
 
-        const image = screen.getByTestId("image") as HTMLImageElement;
+        const image = screen.getByTestId("target-itemImage") as HTMLImageElement;
         expect(image.alt).toBe(firstEpisode.title);
 
         expect(screen.getByText(`Episode ${firstEpisode.episodeNumber}`)).toBeInTheDocument();

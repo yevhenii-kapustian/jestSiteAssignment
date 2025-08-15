@@ -12,7 +12,7 @@ it("should display all the items in the component", () => {
     }
     render(<EpisodeItems {...mockEpisodeItems}/>)
 
-    const image = screen.getByTestId("image") as HTMLImageElement
+    const image = screen.getByTestId("target-itemImage") as HTMLImageElement
     expect(image.alt).toBe(mockEpisodeItems.title)
 
     expect(screen.getByText(`Episode ${mockEpisodeItems.episodeNumber}`)).toBeInTheDocument()
