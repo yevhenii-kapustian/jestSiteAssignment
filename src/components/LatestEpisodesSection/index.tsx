@@ -15,7 +15,7 @@ const LatestEpisodeSection = () => {
 
     return(
         <section className="mt-20 text-white max-sm:mt-15">
-            <div className="mb-20 p-10 flex justify-between items-center gap-5 bg-[#262626] max-md:flex-col max-sm:mb-15">
+            <div className="mb-20 p-10 flex justify-between items-center gap-5 bg-[#1F1F1F] max-md:flex-col max-sm:mb-15">
                 <h2 className="text-6xl text-center">Latest episodes</h2>
                 <button className={buttonStyles} onClick={handleClick}>View all episodes</button>
             </div>
