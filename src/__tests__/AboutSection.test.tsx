@@ -1,6 +1,6 @@
 import {screen, render} from "@testing-library/react"
 import "@testing-library/jest-dom"
-import AboutSection from "."
+import AboutSection from "../components/AboutSection"
 
 test("renders AboutSectin with section name, image, title & discription", () => {
     render(<AboutSection/>)

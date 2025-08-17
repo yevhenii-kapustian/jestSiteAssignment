@@ -1,6 +1,6 @@
 import {screen, render} from "@testing-library/react"
 import "@testing-library/jest-dom"
-import Logo from "."
+import Logo from "../components/Logo"
 
 test("renders the logo with text", () => {
     render(<Logo/>)

@@ -1,6 +1,6 @@
 import {screen, render, fireEvent} from "@testing-library/react"
 import "@testing-library/jest-dom"
-import LatestEpisodeSection from "."
+import LatestEpisodeSection from "../components/LatestEpisodesSection"
 import { episodes } from "@/data/episodes"
 
 describe("test Latest Episode functionality", () => {

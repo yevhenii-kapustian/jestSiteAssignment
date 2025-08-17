@@ -1,6 +1,6 @@
 import { render, screen, within } from "@testing-library/react"
 import "@testing-library/jest-dom"
-import MusicPlatforms from "."
+import MusicPlatforms from "../components/MusicPlatforms"
 import { musicPlatforms } from "@/data/musicPlatforms"
 
 test("render music platforms", () => {
@@ -15,6 +15,6 @@ test("render music platforms", () => {
         const img = within(link).getByRole("img")
         expect(img).toBeInTheDocument()
         expect(img).toHaveAttribute("alt", "platforms")
-  })
+    })
 
 })

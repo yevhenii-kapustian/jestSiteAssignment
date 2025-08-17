@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import "@testing-library/jest-dom"
-import EpisodeItems from "."
+import EpisodeItems from "../components/LatestEpisodesSection/EpisodeItems"
 import { EpisodesType } from "@/types/episodesType"
 
 it("should display all the items in the component", () => {

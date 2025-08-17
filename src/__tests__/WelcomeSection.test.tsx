@@ -1,6 +1,6 @@
 import {screen, render} from "@testing-library/react"
 import "@testing-library/jest-dom"
-import WelcomeSection from "."
+import WelcomeSection from "../components/WelcomeSection"
 import { musicPlatforms } from "@/data/musicPlatforms"
 
 test("renders WelcomeSection with image, heading, and music platforms", () => {

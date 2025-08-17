@@ -1,6 +1,6 @@
 import { screen, render, fireEvent } from "@testing-library/react"
 import "@testing-library/jest-dom"
-import Form from "."
+import Form from "../components/Form"
 
 describe("Form Component", () => {
     test("renders title, inputs and button", () => {

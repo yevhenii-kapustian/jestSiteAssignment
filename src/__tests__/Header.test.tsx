@@ -1,12 +1,29 @@
 import {screen, render, fireEvent, waitFor, within} from "@testing-library/react"
 import "@testing-library/jest-dom"
-import BurgerMenu from "."
-import { navigationLinks } from "@/data/navigation";
+import Header from "../components/Header"
+import { navigationLinks } from "@/data/navigation"
 
-test("should open and close menu onClick", async () => {
-    render(<BurgerMenu />);
+describe("testing the whole component", () => {
+    test("is logo display", () => {
+        render(<Header/>)
 
-    const burgerWrapper = screen.getByTestId("burgerWrapper");
+        const logoText = screen.getByText("Castaway")
+        expect(logoText).toBeInTheDocument()
+    })
+
+    test("if navbar with desktop", () => {
+        render(<Header/>)
+
+        expect(screen.getAllByRole("link").length).toBe(4)
+
+        const navigationDesktop = screen.getByTestId("navigationDesktop")
+        expect(navigationDesktop).toHaveClass("max-sm:hidden")
+    })
+
+    test("if navbar with mobile", async () => {
+        render(<Header/>)
+
+        const burgerWrapper = screen.getByTestId("burgerWrapper");
         expect(burgerWrapper).toHaveClass("hidden max-sm:block");
 
         expect(within(burgerWrapper).queryByRole("link")).not.toBeInTheDocument();
@@ -24,4 +41,6 @@ test("should open and close menu onClick", async () => {
         await waitFor(() => {
             expect(within(burgerWrapper).queryByRole("list")).not.toBeInTheDocument();
         });
-});
+    })
+
+})
