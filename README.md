@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Podcast SPA Proposal
 
-## Getting Started
+    OVERVIEW: 
+        This project is a Single Page Application (SPA) built with React (Next.js).
+        The site is centered around a podcast between two hosts, where users can explore the latest episodes, learn more about the hosts, and subscribe to a newsletter.
 
-First, run the development server:
+    FEATURES & FUNCTIONALITY:
+        Header:
+            Contains site logo and navigation links.
+            Navigation should work between sections/pages. (In my example no)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+        Latest Episodes:
+            Displays onClick a list of recent podcast episodes.
+            Each episode should have a title, description, and "Read More" button.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+        Host Introduction:
+            A section introducing the podcast host with his bio & photo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+        Newsletter Input:
+            Input field where a user can enter their name & email.
+            On submit, the email should be added to a subscription list (mocked).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+        Footer:
+            Contains site logo and navigation links.
+            Displays social media links (Instagram, Twitter, Facebook).
+            Displays links to listen on music platforms (e.g., Spotify, Apple Podcasts).
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
