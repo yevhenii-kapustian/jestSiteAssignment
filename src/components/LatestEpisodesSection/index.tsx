@@ -7,9 +7,9 @@ import { useState } from "react"
 import { buttonStyles } from "@/styles/button"
 
 const LatestEpisodeSection = () => {
-    const [showAll, setShowAll] = useState(false)
+    const [showAll, setShowAll] = useState<boolean>(false)
 
-    const handleClick = () => setShowAll(!showAll)
+    const handleClick = () : void => setShowAll(!showAll)
     
     const showEpisodes = showAll ? episodes : episodes.slice(0, 1)
 
